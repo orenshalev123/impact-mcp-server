@@ -19,11 +19,11 @@ export function registerActionTools(server: McpServer, client: ImpactClient) {
       startDate: z
         .string()
         .optional()
-        .describe("Start date (YYYY-MM-DD). Uses EventDate field for accurate filtering"),
+        .describe("Start date in ISO 8601 format (e.g. 2026-03-01T00:00:00Z). Uses EventDate field for accurate filtering"),
       endDate: z
         .string()
         .optional()
-        .describe("End date (YYYY-MM-DD). Max 45-day range"),
+        .describe("End date in ISO 8601 format (e.g. 2026-03-28T23:59:59Z). Max 45-day range"),
       campaignId: z
         .string()
         .optional()
