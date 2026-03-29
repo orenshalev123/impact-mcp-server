@@ -1,0 +1,43 @@
+{
+  "name": "@power-consulting/impact-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Impact.com affiliate marketing platform - manage actions, partners, campaigns, reporting and more",
+  "license": "MIT",
+  "author": "Power Consulting",
+  "type": "module",
+  "bin": {
+    "impact-mcp-server": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "mcp",
+    "impact",
+    "affiliate",
+    "marketing",
+    "partner",
+    "conversions",
+    "model-context-protocol"
+  ]
+}
